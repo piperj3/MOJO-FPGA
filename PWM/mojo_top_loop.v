@@ -30,7 +30,7 @@ module mojo_top(
   genvar i;
   generate
     for (i = 0; i < 8; i=i+1) begin: pwm_gen_loop
-    pwm #(.CTR_LEN(3)) pwm (
+    PWM #(.CTR_LEN(3)) pwm (
       .rst(rst),
       .clk(clk),
       .compare(i),
